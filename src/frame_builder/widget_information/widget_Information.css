@@ -1,0 +1,27 @@
+.container-InfoWidget {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    background: linear-gradient(135deg, #000000 0%, #4A70A9 100%);
+    border-radius: 15px;
+    border: 3px solid #8FABD4;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .container-InfoWidget {
+        grid-template-columns: 1fr;
+        height: auto;
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-InfoWidget {
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+}

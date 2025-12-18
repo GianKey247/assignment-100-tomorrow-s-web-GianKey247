@@ -1,0 +1,100 @@
+.main-Video, video{
+    width: 100%;
+}
+
+.video-title{
+    margin-top: -20%;
+    margin-left: 10%;
+    margin-bottom: 17%;
+    color: #EFECE3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.video-title h2:nth-child(1){
+    font-size: 3rem;
+    text-align: left;
+    color: #8FABD4;
+}
+
+.video-title h2:nth-child(2){
+    font-size: 5rem;
+    text-align: left;
+    color: #EFECE3;
+}
+
+.container-Slideshow{
+    width: 80%;
+    margin: 5% auto;
+}
+
+.container-Description{
+    width: 79%;
+    margin-top: -10%;
+    margin-left: 10.1%;
+    padding: 3rem;
+    background-color: #4A70A9;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    align-self: start;
+}
+
+.container-Description h2{
+    color: #EFECE3;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.container-InfoBoxes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    row-gap: 5rem;
+    column-gap: 5rem;
+    margin: 5% auto;
+}
+
+.container-InfoBoxes div{
+    padding: 2rem;
+    background: linear-gradient(135deg, #4A70A9 0%, #8FABD4 100%);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-InfoBoxes div:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.container-InfoBoxes h1{
+    color: #EFECE3;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #8FABD4;
+    padding-bottom: 0.5rem;
+}
+
+.container-InfoBoxes h2{
+    color: #EFECE3;
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 1em;
+}
+
+.container-InfoBoxes video{
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.container-InfoBoxes video:hover{
+    transform: scale(1.02);
+}
+
+body {
+    background-color: #000000;
+    color: #EFECE3;
+}

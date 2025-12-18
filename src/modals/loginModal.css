@@ -1,0 +1,174 @@
+.login-page {
+    background: linear-gradient(135deg, #000000 0%, #4A70A9 100%);
+    color: #EFECE3;
+    width: 90%;
+    max-width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #8FABD4;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.login-page > button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #8FABD4;
+    color: #000000;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-page > button:hover {
+    background: #EFECE3;
+    transform: scale(1.1);
+}
+
+.login-page img {
+    display: block;
+    margin: 0 auto 1rem;
+    max-width: 240px;
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #8FABD4;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-Username, .input-Password {
+    background: rgba(239, 236, 227, 0.1);
+    color: #EFECE3;
+    border: 2px solid #8FABD4;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.input-Username:focus, .input-Password:focus {
+    outline: none;
+    border-color: #EFECE3;
+    background: rgba(239, 236, 227, 0.2);
+    box-shadow: 0 0 10px rgba(143, 171, 212, 0.5);
+}
+
+.Password-Label, .UserName-Label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.Password-Span, .UserName-Span {
+    color: #8FABD4;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.submit-button {
+    background: linear-gradient(135deg, #8FABD4 0%, #4A70A9 100%);
+    color: #EFECE3;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 1rem 0;
+}
+
+.submit-button:hover {
+    background: linear-gradient(135deg, #4A70A9 0%, #8FABD4 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(143, 171, 212, 0.4);
+}
+
+h5 {
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.error {
+    background-color: rgba(255, 0, 0, 0.8);
+    border: 1px solid #ff4444;
+    color: #EFECE3;
+}
+
+.success {
+    background-color: rgba(0, 255, 0, 0.3);
+    border: 1px solid #00ff00;
+    color: #EFECE3;
+}
+
+.switch-button {
+    color: #8FABD4;
+    font-size: 1rem;
+    text-decoration: underline;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.switch-button:hover {
+    color: #EFECE3;
+}
+
+.login-form > div:last-child {
+    text-align: center;
+    margin-top: 1rem;
+    color: #EFECE3;
+}
+
+/* Portal overlay background */
+.portal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .login-page {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+}

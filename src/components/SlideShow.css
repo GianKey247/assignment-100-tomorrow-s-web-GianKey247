@@ -1,0 +1,131 @@
+.custom-carousel {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(74, 112, 169, 0.3);
+}
+
+.slide-container {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.slide-video {
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Custom caption styling */
+.custom-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 800px;
+    background: rgba(74, 112, 169, 0.95) !important;
+    border-radius: 12px;
+    padding: 1.5rem 2rem !important;
+    border: 2px solid #8FABD4;
+    backdrop-filter: blur(10px);
+}
+
+.caption-content {
+    color: #EFECE3;
+    text-align: center;
+}
+
+.caption-title {
+    color: #EFECE3 !important;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.caption-description {
+    color: #EFECE3 !important;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom indicator styling */
+.custom-carousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #8FABD4;
+    border: 2px solid #EFECE3;
+    margin: 0 6px;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.custom-carousel .carousel-indicators button.active {
+    background-color: #4A70A9;
+    transform: scale(1.2);
+    opacity: 1;
+    border-color: #4A70A9;
+}
+
+/* Custom control buttons */
+.custom-carousel .carousel-control-prev,
+.custom-carousel .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.custom-carousel .carousel-control-prev:hover,
+.custom-carousel .carousel-control-next:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.custom-carousel .carousel-control-prev-icon,
+.custom-carousel .carousel-control-next-icon {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-size: 60%;
+    background-position: center;
+    filter: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .custom-caption {
+        padding: 1rem 1.5rem !important;
+        bottom: 10px;
+    }
+
+    .caption-title {
+        font-size: 1.4rem;
+    }
+
+    .caption-description {
+        font-size: 1rem;
+    }
+
+    .custom-carousel .carousel-control-prev,
+    .custom-carousel .carousel-control-next {
+        width: 50px;
+        height: 50px;
+        margin: 0 10px;
+    }
+}
+
+/* Animation for smooth transitions */
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-property: opacity;
+    transform: none;
+}

@@ -1,0 +1,38 @@
+{
+    "ASSAULT_ARMOR": {
+        "Name": "ASSAULT ARMOR",
+        "Kind": "Expansion",
+        "AttackPower": 1500,
+        "Impact": 2000,
+        "AccumulativeImpact": 1380,
+        "BlastRadius": 60,
+        "EffectRange": 200,
+        "DirectHitAdjustment": 230,
+        "DefaultOrdering": 1,
+        "Image": "ASSAULT_ARMOR.png"
+    },
+    "PULSE_ARMOR": {
+        "Name": "PULSE ARMOR",
+        "Kind": "Expansion",
+        "Resilience": 3300,
+        "Duration": 10,
+        "DefaultOrdering": 2,
+        "Image": "PULSE_ARMOR.png"
+    },
+    "PULSE_PROTECTION": {
+        "Name": "PULSE PROTECTION",
+        "Kind": "Expansion",
+        "Resilience": 7000,
+        "Duration": 25,
+        "DefaultOrdering": 3,
+        "Image": "PULSE_PROTECTION.png"
+    },
+    "TERMINAL_ARMOR": {
+        "Name": "TERMINAL ARMOR",
+        "Kind": "Expansion",
+        "Resilience": 20000,
+        "Duration": 5,
+        "DefaultOrdering": 4,
+        "Image": "TERMINAL_ARMOR.png"
+    }
+}

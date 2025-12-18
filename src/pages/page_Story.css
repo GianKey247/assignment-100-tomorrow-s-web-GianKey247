@@ -1,0 +1,105 @@
+.container-MainDescription {
+    width: 80%;
+    margin: -2% auto 5%;
+    padding: 3rem;
+    background: linear-gradient(135deg, #4A70A9 0%, #8FABD4 100%);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.container-MainDescription h2 {
+    color: #EFECE3;
+    font-weight: 300;
+    line-height: 1.7;
+    font-size: 1.5rem;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.container-StorySlides {
+    width: 80%;
+    margin: 5% auto;
+    background: rgba(74, 112, 169, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(143, 171, 212, 0.3);
+}
+
+.container-FactionTitle {
+    width: 80%;
+    margin: 5% auto 2.5%;
+    text-align: center;
+}
+
+.container-FactionTitle h2 {
+    color: #8FABD4;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #4A70A9;
+    display: inline-block;
+}
+
+/* Additional styling for main video section to match Home page */
+.main-Video, video {
+    width: 100%;
+}
+
+.video-title {
+    margin-top: -20%;
+    margin-left: 10%;
+    margin-bottom: 17%;
+    color: #EFECE3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.video-title h2:nth-child(1) {
+    font-size: 3rem;
+    text-align: left;
+    color: #8FABD4;
+    font-weight: 400;
+}
+
+.video-title h2:nth-child(2) {
+    font-size: 5rem;
+    text-align: left;
+    color: #EFECE3;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Enhanced HoverPopUp container for factions */
+.combat-container {
+    margin: 2% auto 5%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container-MainDescription,
+    .container-StorySlides,
+    .container-FactionTitle {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .container-MainDescription h2 {
+        font-size: 1.2rem;
+    }
+
+    .container-FactionTitle h2 {
+        font-size: 2rem;
+    }
+
+    .video-title h2:nth-child(1) {
+        font-size: 2rem;
+    }
+
+    .video-title h2:nth-child(2) {
+        font-size: 3rem;
+    }
+}

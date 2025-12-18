@@ -1,0 +1,34 @@
+{
+  "Stagger": {
+    "video": "video/Stagger.mp4",
+    "description": "Building up enemy stagger meters to create openings for massive damage opportunities.Make sure you maintain yours or else they can turn the tide of battle."
+  },
+  "Attitude Stability": {
+    "video": "video/Attitude Stability.mp4",
+    "description": "The heavier the more Stable, the more impact you can take before you stagger."
+  },
+  "Kinetic Weapons": {
+    "video": "video/Kinetic Weapon.mp4",
+    "description": "The jack of all trades, Kinetic weapons are the most versatile and can be used to deal damage from a distance or up close."
+  },
+  "Energy Weapons": {
+    "video": "video/Energy Weapon.mp4",
+    "description": "Sacrifices stagger for high projectile speed and Higher Damage, Do be careful about overheating them"
+  },
+  "Explosive Weapons": {
+    "video": "video/Explosive Weapon.mp4",
+    "description": "Sacrifices projectile speed for High stagger, Missiles are easy to predict but gives pressure and Bazooka's may stance you but they Hit hard"
+  },
+  "Biped": {
+    "video": "video/AB.mp4",
+    "description": "Good balance of stats and have the most weight variety for most peoples needs"
+  },
+  "Tetrapod": {
+    "video": "video/Hover.mp4",
+    "description": "Allows you to carry more weight and have a higher quick boost performance, While in hover, it negates stances from weapons"
+  },
+  "Tank": {
+    "video": "video/Drift.mp4",
+    "description": "Sacrifices most of its mobility for massive amount of defenses and stability, it also negates stances from weapons passively"
+  }
+}

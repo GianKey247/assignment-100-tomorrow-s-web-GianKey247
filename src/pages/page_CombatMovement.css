@@ -1,0 +1,104 @@
+.Movement-Video {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    margin: 10% auto 5%;
+    width: 90%;
+    align-items: center;
+    background: linear-gradient(135deg, #4A70A9 0%, #8FABD4 100%);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+.Combat-Video {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    margin: 10% auto 5%;
+    width: 90%;
+    align-items: center;
+    background: linear-gradient(135deg, #8FABD4 0%, #4A70A9 100%);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.Movement-Video video {
+    width: 80%;
+    margin-left: 6%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.Movement-Video video:hover {
+    transform: scale(1.03);
+}
+
+.Combat-Video video {
+    width: 80%;
+    margin-left: 14%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.Combat-Video video:hover {
+    transform: scale(1.03);
+}
+
+.Movement-Video h2 {
+    background: rgba(0, 0, 0, 0.7);
+    color: #EFECE3;
+    text-align: center;
+    margin-right: 25%;
+    margin-left: -25%;
+    padding: 3rem 2rem;
+    font-weight: 300;
+    line-height: 1.6;
+    font-size: 1.4rem;
+    border-left: 4px solid #8FABD4;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.Combat-Video h2 {
+    background: rgba(0, 0, 0, 0.7);
+    color: #EFECE3;
+    text-align: center;
+    margin-right: -25%;
+    margin-left: 25%;
+    padding: 3rem 2rem;
+    font-weight: 300;
+    line-height: 1.6;
+    font-size: 1.4rem;
+    border-right: 4px solid #8FABD4;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Additional styling for the HoverPopUp sections */
+.combat-container {
+    margin: 5% auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .Movement-Video,
+    .Combat-Video {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+
+    .Movement-Video video,
+    .Combat-Video video {
+        width: 90%;
+        margin: 5% auto;
+    }
+
+    .Movement-Video h2,
+    .Combat-Video h2 {
+        margin: 0;
+        padding: 2rem 1rem;
+    }
+}
