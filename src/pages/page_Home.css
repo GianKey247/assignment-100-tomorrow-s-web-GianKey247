@@ -25,15 +25,16 @@
 .container-Slideshow{
     width: 80%;
     margin: 5% auto;
+    border-radius: 15px 15px 0 0;
 }
 
 .container-Description{
-    width: 79%;
-    margin-top: -10%;
-    margin-left: 10.1%;
+    width: 79.25%;
+    margin-top: -5%;
+    margin-left: 10%;
     padding: 3rem;
     background-color: #4A70A9;
-    border-radius: 15px;
+    border-radius: 0 0 15px 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     align-self: start;
 }
@@ -44,7 +45,7 @@
     line-height: 1.6;
     text-align: center;
     margin: 0;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .container-InfoBoxes{

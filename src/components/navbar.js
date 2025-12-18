@@ -13,10 +13,10 @@ function CustomNavbar({user, setUser}) {
             <Navbar bg="dark" data-bs-theme="dark"className={"container-Navbar"}>
                 <Container>
                     <Nav className="me-auto">
-                        <Nav.Link as={NavLink} to="/">Home</Nav.Link>
-                        <Nav.Link as={NavLink} to="/CombatMovementPage">Movement and Combat</Nav.Link>
-                        <Nav.Link as={NavLink} to="/StoryPage">Story</Nav.Link>
-                        <Nav.Link as={NavLink} to="/FrameBuilder">Frame Builder</Nav.Link>
+                        <Nav.Link as={NavLink} className={"hyper-Link"} to="/">Home</Nav.Link>
+                        <Nav.Link as={NavLink} className={"hyper-Link"} to="/CombatMovementPage">Movement and Combat</Nav.Link>
+                        <Nav.Link as={NavLink} className={"hyper-Link"} to="/StoryPage">Story</Nav.Link>
+                        <Nav.Link as={NavLink} className={"hyper-Link"} to="/FrameBuilder">Frame Builder</Nav.Link>
                         <button
                             onClick={()=> {
                                 if (user.UserName){

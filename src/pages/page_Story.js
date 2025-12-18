@@ -49,7 +49,7 @@ function PageStory(){
         <>
             <div className={"main-Video"}>
                 <video
-                    src={"video/Fires of Ibis.mp4"}
+                    src={process.env.PUBLIC_URL+"/video/Fires of Ibis.mp4"}
                     autoPlay
                     muted
                     loop
@@ -71,7 +71,7 @@ function PageStory(){
                 />
             </div>
             <div className={"container-FactionTitle"}>
-                <h2>Meet the Factions of Rubicon</h2>
+                <h2>Factions of Rubicon</h2>
             </div>
             <div>
                 <HoverPopUp

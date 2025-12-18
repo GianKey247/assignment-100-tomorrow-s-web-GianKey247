@@ -104,7 +104,7 @@ function StatsDisplay({selected_Catagory, selected_Part}) {
     }
 
     return (
-        <div>
+        <div className={"stats-container"}>
             <div className={"container-Banner"}>
                 <div className="stat-Label">
                     <span className="stat-name">Name:</span>
@@ -115,7 +115,10 @@ function StatsDisplay({selected_Catagory, selected_Part}) {
                     <span
                         className="stat-value">{selected_Part_data["Description"] || selected_Part_data["LegType"] || "No description available"}</span>
                 </div>
-                <img className={"stat-Manufacturer"} src={getManufacturerImg(selected_Part_data["Manufacturer"])}/>
+                {selected_Part_data["Manufacturer"]!== undefined &&
+                    <img className={"stat-Manufacturer"} src={getManufacturerImg(selected_Part_data["Manufacturer"])}/>
+                }
+
             </div>
 
 
@@ -127,25 +130,27 @@ function StatsDisplay({selected_Catagory, selected_Part}) {
                 )}
             </div>
 
-            <div className="stat-Weight">
-                <span className="stat-name">Weight:</span>
-                <progress
-                    value={1 - ((selected_Part_data['Weight'] - minMaxVal.lowest_values_stats['Weight']) /
-                        (minMaxVal.highest_values_stats['Weight'] - minMaxVal.lowest_values_stats['Weight']))}
-                    className="stat-progress"
-                    max="1"
-                />
-                <span className="stat-value">{selected_Part_data["Weight"]?.toLocaleString() || 0}</span>
-            </div>
-            <div className="stat-ENLoad">
-                <span className="stat-name">EN Load:</span>
-                <progress
-                    value={(selected_Part_data['ENLoad'] - minMaxVal.lowest_values_stats['ENLoad']) /
-                        (minMaxVal.highest_values_stats['ENLoad'] - minMaxVal.lowest_values_stats['ENLoad'])}
-                    className="stat-progress"
-                    max="1"
-                />
-                <span className="stat-value">{selected_Part_data["ENLoad"]?.toLocaleString() || 0}</span>
+            <div className={"stat-EN&Weight"}>
+                <div className="stat-Weight">
+                    <span className="stat-name">Weight:</span>
+                    <progress
+                        value={1 - ((selected_Part_data['Weight'] - minMaxVal.lowest_values_stats['Weight']) /
+                            (minMaxVal.highest_values_stats['Weight'] - minMaxVal.lowest_values_stats['Weight']))}
+                        className="stat-progress"
+                        max="1"
+                    />
+                    <span className="stat-value">{selected_Part_data["Weight"]?.toLocaleString() || 0}</span>
+                </div>
+                <div className="stat-ENLoad">
+                    <span className="stat-name">EN Load:</span>
+                    <progress
+                        value={(selected_Part_data['ENLoad'] - minMaxVal.lowest_values_stats['ENLoad']) /
+                            (minMaxVal.highest_values_stats['ENLoad'] - minMaxVal.lowest_values_stats['ENLoad'])}
+                        className="stat-progress"
+                        max="1"
+                    />
+                    <span className="stat-value">{selected_Part_data["ENLoad"]?.toLocaleString() || 0}</span>
+                </div>
             </div>
         </div>
     )

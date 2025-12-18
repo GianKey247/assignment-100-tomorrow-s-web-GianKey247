@@ -8,7 +8,6 @@ const supabase = createClient(
     process.env.REACT_APP_SUPABASE_ANON_KEY
 );
 
-// Convert username to email format required by Supabase
 const usernameToEmail = (username) => `${username}@gmail.com`;
 
 function LoginModal({ isOpen, setIsOpen, setUser }) {
@@ -64,7 +63,7 @@ function LoginModal({ isOpen, setIsOpen, setUser }) {
             if (isLogin) {
                 // SIGN IN - Must use email
                 const { data, error } = await supabase.auth.signInWithPassword({
-                    email: email,  // ✅ Use synthetic email
+                    email: email,
                     password: formData.password,
                 });
 
@@ -86,17 +85,17 @@ function LoginModal({ isOpen, setIsOpen, setUser }) {
                     UserName: profile?.username || formData.username,
                     SavedBuilds:profile.saved_builds
                 });
-
+                new Audio("./sfx/Login.wav").play();
                 setTimeout(() => {
                     setIsOpen(false);
-                    setFormData({ username: '', password: '', confirmPassword: '' });
-                    setMessage('');
-                }, 1500);
+                    setFormData({UserName: '', Password: '', confirmPassword: ''});
+                }, 2000);
+
 
             } else {
                 // SIGN UP - Pass username in metadata
                 const { data, error } = await supabase.auth.signUp({
-                    email: email,  // ✅ Use synthetic email
+                    email: email,
                     password: formData.password,
                     options: {
                         data: {
@@ -110,9 +109,7 @@ function LoginModal({ isOpen, setIsOpen, setUser }) {
                     throw error;
                 }
 
-                // ✅ REMOVE manual profile creation - your SQL trigger handles this automatically
-                // This prevents race conditions and duplicate entries
-
+                new Audio("./sfx/Sign Up.wav").play();
                 setMessage('Account created! Please login.');
                 setIsLogin(true);
                 setFormData({ username: '', password: '', confirmPassword: '' });

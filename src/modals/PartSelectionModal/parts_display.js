@@ -3,7 +3,7 @@ import {partData} from "../../components/part_Data";
 import React from "react";
 
 function PartsDisplay({category, weapon_placement, handlePartSelect, handlePartHover, hoveredPart}) {
-    const selected_Category = category;
+    let selected_Category = category;
 
     const filteredParts = Object.keys(partData[selected_Category] || {}).filter((part_data) => {
         if (selected_Category === "unit") {
@@ -23,7 +23,7 @@ function PartsDisplay({category, weapon_placement, handlePartSelect, handlePartH
     const handleImageLoad = (e) => {
         e.target.style.display = 'block';
     };
-
+    console.log(`Parts display filteredParts : ${filteredParts}`)
     return (
         <div className="items-grid">
             {filteredParts.length === 0 ? (
@@ -36,11 +36,21 @@ function PartsDisplay({category, weapon_placement, handlePartSelect, handlePartH
                     No parts available for this category
                 </div>
             ) : (
+
                 filteredParts.map((part_data) => {
                     const each_part_data = partData[selected_Category][part_data];
+                    console.log(`Parts display each_part_data : ${each_part_data}`)
                     const imageName = each_part_data?.["Image"];
+                    console.log(`Parts display imageName: ${imageName}`)
+                    let change_selected_Category = selected_Category
+                    if (change_selected_Category==="fcs")
+                        change_selected_Category="FCS"
+                    else
+                        change_selected_Category = change_selected_Category.charAt(0).toUpperCase()
+                            + change_selected_Category.slice(1)
+                    console.log(`Parts display selected_Category: ${change_selected_Category} `)
                     const imagePath = imageName
-                        ? `${process.env.PUBLIC_URL}/images/${selected_Category.charAt(0).toUpperCase() + selected_Category.slice(1)}/${imageName}`
+                        ? `${process.env.PUBLIC_URL}/images/${change_selected_Category}/${imageName}`
                         : `${process.env.PUBLIC_URL}/images/fallback-part.png`;
 
                     const isHovered = hoveredPart === part_data;

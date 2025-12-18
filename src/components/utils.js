@@ -1,6 +1,13 @@
 import {partData} from "./part_Data";
 
 export function getManufacturerImg (manufacturer) {
+    console.log(`Utils Manufacturer name: ${manufacturer}`)
+    if ( manufacturer === undefined) {
+        return null;
+    }
+    return `${process.env.PUBLIC_URL}/images/Manufacturers/${manufacturer.replace(" ","_")}.png`;
+    if (manufacturer === "None" )
+        return null;
     return `${process.env.PUBLIC_URL}/images/Manufacturers/${manufacturer.replace(" ","_")}.png`;
 }
 
@@ -8,13 +15,22 @@ export function getPartImage(category, part) {
 
     console.warn(`Getting image for ${category}: ${part}`);
     let dataCategory = category;
+    console.log(`initial dataCategory ${dataCategory}`)
     if (!part || !part.name) {
+        console.log(`dataCategory: ${dataCategory}`)
         if (["LeftArm", "RightArm", "LeftBack", "RightBack"].includes(category)) {
             dataCategory = "unit";
         }
         console.warn(`No part selected for ${dataCategory}`);
         const categoryData = partData[dataCategory];
         const firstPartKey = Object.keys(categoryData)[0];
+        dataCategory= dataCategory.charAt(0).toUpperCase()
+        + dataCategory.slice(1)
+        console.log(`dataCategory slice: ${dataCategory}`)
+        if (dataCategory === "Fcs") {
+            dataCategory = "FCS"
+            console.log(`dataCategory FCS name: ${dataCategory}`)
+        }
         return `${process.env.PUBLIC_URL}/images/${dataCategory}/${categoryData[firstPartKey]["Image"]}`;
     }
 
@@ -30,11 +46,17 @@ export function getPartImage(category, part) {
         const imageName = partDataEntry["Image"];
 
         // Determine the folder based on category
-        let folder = category;
+        let folder =   category.charAt(0).toUpperCase()
+            + category.slice(1);
         if (category === "LeftArm" || category === "RightArm" || category === "LeftBack" || category === "RightBack") {
             folder = "unit";
         }
-
+        folder=folder.charAt(0).toUpperCase() + folder.slice(1)
+        console.log(`Folder name: ${folder}`)
+        if (folder ==="Fcs") {
+            folder = "FCS"
+            console.log(`Folder name: ${folder}`)
+        }
         return `${process.env.PUBLIC_URL}/images/${folder}/${imageName}`;
 
     } catch (error) {

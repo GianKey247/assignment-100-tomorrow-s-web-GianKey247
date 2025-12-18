@@ -23,8 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "clean-assets": "node scripts/clean-assets.js",
-    "predeploy": "npm run build && npm run clean-assets",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {

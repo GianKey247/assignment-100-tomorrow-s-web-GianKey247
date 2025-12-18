@@ -10,6 +10,7 @@
     align-items: center;
     z-index: 1000;
     padding: 2rem;
+
 }
 
 .modal-content {
@@ -22,7 +23,7 @@
     border: 3px solid #8FABD4;
     max-width: 90vw;
     margin-top: 0.5%;
-    width: 1200px
+    width: 1200px;
 }
 
 .button_Container {

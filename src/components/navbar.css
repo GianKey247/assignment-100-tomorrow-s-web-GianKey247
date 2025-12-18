@@ -47,6 +47,10 @@
     backdrop-filter: blur(5px);
 }
 
+.hyper-Link{
+    font-size: 1.4rem;
+}
+
 .navbar-dark .navbar-nav .nav-link::before {
     content: '';
     position: absolute;
@@ -133,7 +137,7 @@
     margin-left: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     border: 1.5px solid rgba(239, 236, 227, 0.4);
     position: relative;
     overflow: hidden;
