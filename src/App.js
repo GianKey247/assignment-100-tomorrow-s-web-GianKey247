@@ -10,15 +10,13 @@ import CustomNavbar from "./components/navbar";
 function App() {
     const [user, setUser] = useState({
         UserName: "",
-        SavedBuilds: { "Flower": {} }
+        SavedBuilds: {}
     });
 
     return (
         <div className="App">
-            {/* ✅ Add basename for GitHub Pages subpath */}
             <Router basename={process.env.PUBLIC_URL}>
                 <CustomNavbar user={user} setUser={setUser} />
-                {/* ✅ Clean structure - no nested App/header */}
                 <Routes>
                     <Route path="/" element={<PageHome />} />
                     <Route path="/CombatMovementPage" element={<CombatMovementPage />} />

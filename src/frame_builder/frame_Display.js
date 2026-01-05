@@ -5,14 +5,12 @@ import {getArmImage, getPartImages, hasNoPart} from "../components/utils";
 function FrameDisplay({selected_Parts}){
     console.log("FrameDisplay selected_Parts:", selected_Parts);
 
-    // Helper function to get image path for a part
 
     const armLImage = getArmImage(selected_Parts,'left');
     const armRImage = getArmImage(selected_Parts,'right');
     const partImages = getPartImages(selected_Parts);
     return (
         <div className={"frame-display"}>
-            {/* Frame Parts - set opacity to 0 if no part is selected */}
             <img
                 className={"weapon_shoulder_left_Display"}
                 style={{opacity: hasNoPart(selected_Parts,"RightBack") ? 0 : 1}}
@@ -68,7 +66,6 @@ function FrameDisplay({selected_Parts}){
                 alt="Head Part"
             />
 
-            {/* Fallback for when no parts are selected */}
             {Object.values(selected_Parts).every(part => !part || !part.name) && (
                 <div className="no-parts-message">
                     No parts selected

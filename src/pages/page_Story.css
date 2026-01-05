@@ -44,7 +44,7 @@
     display: inline-block;
 }
 
-/* Additional styling for main video section to match Home page */
+/* styling for main video section */
 .main-Video, video {
     width: 100%;
 }
@@ -73,7 +73,7 @@
     letter-spacing: 1px;
 }
 
-/* Enhanced HoverPopUp container for factions */
+/* HoverPopUp container for factions */
 .combat-container {
     margin: 2% auto 5%;
 }

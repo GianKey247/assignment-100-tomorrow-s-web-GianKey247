@@ -37,15 +37,12 @@ export function getPartImage(category, part) {
     try {
         let partName = part.name;
 
-        // Handle weapon placements (they use "unit" data)
         if (["LeftArm", "RightArm", "LeftBack", "RightBack"].includes(category)) {
             dataCategory = "unit";
         }
-        // Get the part data
         const partDataEntry = partData[dataCategory][partName];
         const imageName = partDataEntry["Image"];
 
-        // Determine the folder based on category
         let folder =   category.charAt(0).toUpperCase()
             + category.slice(1);
         if (category === "LeftArm" || category === "RightArm" || category === "LeftBack" || category === "RightBack") {
@@ -67,7 +64,6 @@ export function getPartImage(category, part) {
 export function getPartImages(selected_Parts) {
    const partImages = {};
     Object.entries(selected_Parts).forEach(([category, part]) => {
-        // Only try to get image if part is not null
         partImages[category] = getPartImage(category, part);
     });
     return partImages;
@@ -79,11 +75,9 @@ export function hasNoPart(selected_Parts, category){
     return !part || !part.name;
 }
 
-// Special handling for arm images (left/right variants)
 export function getArmImage (selected_Parts, side) {
     const armPart = selected_Parts.arms;
 
-    // Check if arm part exists and has a name
     if (!armPart || !armPart.name) {
         console.log(`No arm part selected for ${side}`);
         // Get the first arm part for fallback
@@ -97,7 +91,6 @@ export function getArmImage (selected_Parts, side) {
         if (!armData || !armData.Image) return null;
 
         const baseImage = armData.Image;
-        // Assuming arm images follow naming convention: baseName_L.png and baseName_R.png
         const sideSuffix = side === 'left' ? '_L' : '_R';
         const sideImage = baseImage.replace('.png', `${sideSuffix}.png`);
 

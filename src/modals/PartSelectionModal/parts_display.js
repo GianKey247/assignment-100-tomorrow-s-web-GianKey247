@@ -65,7 +65,6 @@ function PartsDisplay({category, weapon_placement, handlePartSelect, handlePartH
                             onLoad={handleImageLoad}
                             onClick={() => handlePartSelect(part_data)}
                             onMouseEnter={() => handlePartHover(part_data)}
-                            // onMouseLeave={() => handlePartHover(null)}
                             className={partClass}
                             loading="lazy"
                         />

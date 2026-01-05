@@ -16,7 +16,7 @@ function PartSelector({openCategory, setOpenCategory, category, compact = false,
                 alt={categoryName}
                 onClick={() => {
                     console.log("PartSelector clicked - setting openCategory to:", category);
-                    setOpenCategory(category); // Use the original category, not dataCategory
+                    setOpenCategory(category);
                 } }
             />
         </div>

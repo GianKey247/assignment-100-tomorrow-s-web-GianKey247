@@ -10,7 +10,6 @@ function HoverPopUp({category, title}){
         <div
             className="hover-card h-100"
             onClick={() => navigate(item.navigate)}
-            // onClick={() => console.log(item.navigate)}
         >
             <Card className="feature-card h-100">
                 <div className="card-media-container">

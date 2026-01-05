@@ -26,7 +26,6 @@ function PartSelectionModal({isOpen, setIsOpen, category, weapon_placement, sele
         setIsOpen(false);
     };
 
-    // Fixed hover logic: hovered part takes precedence, then selected part, then first part
     let partToDisplay;
     if (hoveredPart) {
         partToDisplay = { name: hoveredPart };
@@ -48,7 +47,6 @@ function PartSelectionModal({isOpen, setIsOpen, category, weapon_placement, sele
     console.log("Modal Hovered Part", hoveredPart)
 
 
-    // Return null if modal is not open
     if (!isOpen) return null;
 
     return (

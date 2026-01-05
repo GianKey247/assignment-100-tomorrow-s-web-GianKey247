@@ -10,7 +10,6 @@
     overflow: hidden;
 }
 
-/* Responsive design */
 @media (max-width: 1024px) {
     .container-InfoWidget {
         grid-template-columns: 1fr;

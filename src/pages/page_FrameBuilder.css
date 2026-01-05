@@ -87,7 +87,7 @@
     min-height: 400px;
 }
 
-/* Save/Build Form */
+/* Save / Build Form */
 .save_new-Build {
     display: flex;
     flex-direction: column;
@@ -159,7 +159,6 @@
     box-shadow: 0 8px 20px rgba(143, 171, 212, 0.5);
 }
 
-/* Message Styling */
 .message {
     padding: 1rem;
     margin: 1rem 0;
@@ -185,7 +184,6 @@
     background: rgba(143, 171, 212, 0.2);
 }
 
-/* Frame Display Adjustments */
 .frame-display {
     margin: -2rem;
 }

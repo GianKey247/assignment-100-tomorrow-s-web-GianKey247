@@ -18,7 +18,6 @@ function InformationDisplay({selectedInfo, selectedInfoKey}){
                     onError={(e) => {
                         console.warn("Video failed to load:", selectedInfo["video"]);
                         e.target.style.display = 'none';
-                        // You could set a state here to show placeholder instead
                     }}
                 />
             ) : (

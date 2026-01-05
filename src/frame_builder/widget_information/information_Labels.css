@@ -37,7 +37,6 @@
     color: #000000;
 }
 
-/* Style for active/selected item */
 .container-InfoButton .stat-name.active {
     background: linear-gradient(135deg, #8FABD4 0%, #4A70A9 100%);
     border-color: #EFECE3;
@@ -47,7 +46,6 @@
     transform: translateX(5px);
 }
 
-/* Custom scrollbar */
 .container-InfoButton::-webkit-scrollbar {
     width: 8px;
 }
@@ -66,7 +64,6 @@
     background: linear-gradient(135deg, #4A70A9 0%, #8FABD4 100%);
 }
 
-/* Responsive design */
 @media (max-width: 1024px) {
     .container-InfoButton {
         border-right: none;

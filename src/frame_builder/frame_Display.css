@@ -1,7 +1,7 @@
 .frame-display{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto minmax(0, 0.5fr) minmax(0, 0.5fr) minmax(0, 0.5fr); /* Reduced fr values */
+    grid-template-rows: auto minmax(0, 0.5fr) minmax(0, 0.5fr) minmax(0, 0.5fr);
     text-align: center;
     align-items: end;
     justify-items: center;
@@ -13,7 +13,6 @@
     row-gap: 0;
 }
 
-/* Head and shoulder weapons - top row - MOVED UP */
 .weapon_shoulder_left_Display{
     grid-column: 1;
     grid-row: 1;
@@ -29,9 +28,9 @@
     transform: scale(0.3);
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
     z-index: 3;
-    align-self: end; /* Keep at bottom of row */
+    align-self: end;
     justify-self: center;
-    margin-bottom: -15px; /* Increased negative margin to pull head down into core */
+    margin-bottom: -15px;
 }
 
 .weapon_shoulder_right_Display{
@@ -39,11 +38,10 @@
     grid-row: 1;
     transform: scale(0.4) translateX(-180%);
     z-index: 2;
-    align-self: end; /* Changed from start to end to match left side */
+    align-self: end;
     justify-self: start;
 }
 
-/* Arms and core - MOVED UP */
 .armL_Display{
     grid-column: 1;
     grid-row: 2;
@@ -51,7 +49,7 @@
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
     z-index: 2;
     align-self: end;
-    margin-bottom: 30px; /* Reduced from 80px */
+    margin-bottom: 30px;
     justify-self: end;
 }
 
@@ -62,22 +60,21 @@
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
     z-index: 3;
     align-self: end;
-    margin-bottom: -15px; /* Increased negative margin */
+    margin-bottom: -15px;
     justify-self: center;
 }
 
 .armR_Display{
     grid-column: 3;
     grid-row: 2;
-    transform: scale(0.9) translateX(-160%) translateY(20%); /* Reduced translateY from 20% */
+    transform: scale(0.9) translateX(-160%) translateY(20%);
     filter: drop-shadow(0 4px 9px rgba(0, 0, 0, 0.5));
     z-index: 4;
     align-self: end;
-    margin-bottom: -20px; /* Adjusted from -20px */
+    margin-bottom: -20px;
     justify-self: start;
 }
 
-/* Legs and weapons - MOVED UP */
 .weapon_left_Display{
     grid-column: 1;
     grid-row: 4;
@@ -85,7 +82,7 @@
     z-index: 1;
     align-self: start;
     justify-self: end;
-    margin-top: -60px; /* Increased negative margin from -30px */
+    margin-top: -60px;
 }
 
 .legs_Display{
@@ -95,7 +92,7 @@
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
     z-index: 2;
     align-self: start;
-    margin-top: -50px; /* Increased negative margin from -50px */
+    margin-top: -50px;
     justify-self: center;
 }
 
@@ -106,7 +103,7 @@
     z-index: 1;
     align-self: start;
     justify-self: start;
-    margin-top: -80px; /* Increased negative margin from -50px */
+    margin-top: -80px;
 }
 
 .no-parts-message {
@@ -118,6 +115,6 @@
     font-style: italic;
 }
 
-.container > *:nth-child(n+4) { /* Target rows 2-4 */
+.container > *:nth-child(n+4) {
     margin-top: -3rem;
 }

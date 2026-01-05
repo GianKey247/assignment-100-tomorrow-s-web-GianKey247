@@ -68,9 +68,9 @@ function PageFrameBuilder({user, setUser}){
             };
 
             const { error } = await supabase
-                .from('users')
-                .update({ SavedBuilds: updatedBuilds })
-                .eq('UserName', user.UserName);
+                .from('profiles')
+                .update({ saved_builds: updatedBuilds })
+                .eq('username', user.UserName);
 
             if (error) {
                 setMessage('Error saving build');

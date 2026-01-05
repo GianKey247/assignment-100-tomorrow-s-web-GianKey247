@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Row, Col, Carousel} from 'react-bootstrap';
-import './SlideShow.css'; // We'll create this CSS file
+import './SlideShow.css';
 
 function SlideShow(slides_data){
     const [slideIndex, setSlideIndex] = useState(0);

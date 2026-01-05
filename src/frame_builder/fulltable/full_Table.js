@@ -6,7 +6,6 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 
 
 function FullTable({selected_Parts,set_selected_Parts,user}){
-    // Track which category is currently open as an object
     const [openCategory, setOpenCategory] = useState(null);
     return (
         <div className="full-table-container">
@@ -14,14 +13,12 @@ function FullTable({selected_Parts,set_selected_Parts,user}){
                 <DropdownButton id="dropdown-item-button"
                                 title="Saved Builds Drop Down"
                 >
-                    {/*{!user&&<Dropdown.ItemText>If its empty, You have to sign in</Dropdown.ItemText>}*/}
                     {user && Object.entries(user.SavedBuilds).map(([buildName, parts]) => (
                         <Dropdown.Item
                             as="button"
                             key={buildName}
                             onClick={() => {
                                 set_selected_Parts(parts);
-                                // setOpenCategory(null);
                             }}
                         >
                             {buildName}

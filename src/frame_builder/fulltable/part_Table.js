@@ -4,7 +4,6 @@ import "./part_Table.css";
 
 
 function PartTable({openCategory, setOpenCategory, title, categories, selected_Parts, set_selected_Parts}){
-    // Create a function to update a specific category
     const setSelectedPartForCategory = (category, part) => {
         console.log(`PartTable - Setting part for ${category}:`, part);
         set_selected_Parts(prev => ({
@@ -29,17 +28,14 @@ function PartTable({openCategory, setOpenCategory, title, categories, selected_P
                 ))}
             </div>
 
-            {/* Render ONE modal for the currently open category */}
             {categories.map(category => {
                 const isOpen = openCategory === category;
                 console.log(`PartTable - Open category: ${category}, isOpen: ${isOpen}`);
                 if (!isOpen) return null;
 
-                // Determine the actual data category for the modal
                 let dataCategory = category;
                 let weaponPlacement = category;
 
-                // If it's a weapon placement, the data category is "unit"
                 if (["Right Arm", "Left Arm", "Right Back", "Left Back"].includes(category)) {
                     dataCategory = "unit";
                     weaponPlacement = category;

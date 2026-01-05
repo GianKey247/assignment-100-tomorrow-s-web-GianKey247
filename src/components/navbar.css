@@ -192,7 +192,6 @@
     z-index: 2;
 }
 
-/* Enhanced glow effect for active navigation */
 .navbar-dark .navbar-nav .nav-link.active {
     animation: gentlePulse 2s infinite;
 }
@@ -202,7 +201,6 @@
     50% { box-shadow: 0 4px 16px rgba(143, 171, 212, 0.7); }
 }
 
-/* Improved responsive design */
 @media (max-width: 1200px) {
     .navbar-dark .navbar-nav .nav-link {
         padding: 0.6rem 1.2rem;
@@ -296,7 +294,6 @@
     }
 }
 
-/* Additional micro-interactions */
 .navbar-dark .navbar-nav .nav-link:active {
     transform: translateY(0) scale(0.98);
 }

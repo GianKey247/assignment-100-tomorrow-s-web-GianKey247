@@ -10,7 +10,6 @@ function WidgetInformation(){
     const [selectedInfo, setSelectedInfo] = useState(null);
     const [selectedInfoKey, setSelectedKey] = useState(null);
 
-    // Initialize with first item when component mounts
     useEffect(() => {
         if (Object.keys(info_data).length > 0 && !selectedInfoKey) {
             const firstKey = Object.keys(info_data)[0];

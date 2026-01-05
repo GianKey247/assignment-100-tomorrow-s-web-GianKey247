@@ -1,4 +1,3 @@
-// mainStats_Display.js
 import "./mainStats_Display.css"
 import React, {useState, useEffect} from "react";
 import {Calculations} from "../components/calculations";
@@ -13,7 +12,6 @@ function MainStatsDisplay({selected_Parts,user,setUser}) {
         setTotalStats(computedStats);
     }, [selected_Parts]);
 
-    // Helper function to determine if a stat is critical
     const getStatStatus = (statName, value) => {
         if (!value) return '';
 
@@ -33,7 +31,6 @@ function MainStatsDisplay({selected_Parts,user,setUser}) {
         }
     };
 
-    // Organized stat groups
     const statGroups = {
         combat: {
             name: "COMBAT PERFORMANCE",
@@ -85,7 +82,6 @@ function MainStatsDisplay({selected_Parts,user,setUser}) {
         return value;
     };
 
-    // Check for critical warnings
     const hasCriticalWarnings = totalStats.totalLoad > totalStats.loadLimit ||
         totalStats.armLoad > totalStats.armsLoadLimit ||
         totalStats.ENLoad > totalStats.ENOutput;
@@ -120,7 +116,6 @@ function MainStatsDisplay({selected_Parts,user,setUser}) {
                 </button>
             </div>
 
-            {/* Tab Content */}
             <div className="tab-content">
                 <div className="main_Stat_row stat-section">
                     <span className="main_stat_name">{statGroups[activeTab].name}</span>
@@ -137,7 +132,6 @@ function MainStatsDisplay({selected_Parts,user,setUser}) {
                     </div>
                 ))}
 
-                {/* Critical warnings summary - show on all tabs if applicable */}
                 {hasCriticalWarnings && (
                     <div className="main_Stat_row critical" style={{marginTop: '1rem'}}>
                         <span className="main_stat_name">⚠️ CRITICAL WARNINGS</span>
