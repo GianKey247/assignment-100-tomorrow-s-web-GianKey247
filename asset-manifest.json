@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/assignment-100-tomorrow-s-web-GianKey247/static/css/main.264b5893.css",
-    "main.js": "/assignment-100-tomorrow-s-web-GianKey247/static/js/main.cc858def.js",
+    "main.js": "/assignment-100-tomorrow-s-web-GianKey247/static/js/main.f8b1f902.js",
     "static/js/453.6b1444f1.chunk.js": "/assignment-100-tomorrow-s-web-GianKey247/static/js/453.6b1444f1.chunk.js",
     "index.html": "/assignment-100-tomorrow-s-web-GianKey247/index.html",
     "main.264b5893.css.map": "/assignment-100-tomorrow-s-web-GianKey247/static/css/main.264b5893.css.map",
-    "main.cc858def.js.map": "/assignment-100-tomorrow-s-web-GianKey247/static/js/main.cc858def.js.map",
+    "main.f8b1f902.js.map": "/assignment-100-tomorrow-s-web-GianKey247/static/js/main.f8b1f902.js.map",
     "453.6b1444f1.chunk.js.map": "/assignment-100-tomorrow-s-web-GianKey247/static/js/453.6b1444f1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.264b5893.css",
-    "static/js/main.cc858def.js"
+    "static/js/main.f8b1f902.js"
   ]
 }
